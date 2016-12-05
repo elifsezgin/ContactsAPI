@@ -8,11 +8,7 @@ def index_users
     port: 3000,
     path: '/users.json'
   ).to_s
-  begin
-    puts RestClient.get(url)
-  rescue RestClient::Exception
-    # something
-  end
+  puts RestClient.get(url)
 end
 
 def create_user(name, email)
